@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Entrar | CineDate</title>
+
+    <link rel="stylesheet" href="/style.css">
+    <link rel="stylesheet" href="/css/login.css">
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Outfit:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet">
+</head>
+
+<body class="login-body">
+
+    <main class="login-container">
+
+        <section class="login-card">
+
+            <a href="../index.html" class="logo login-logo">
+                <span class="logo-icon">▶</span>
+                <span>Cine<span class="logo-highlight">Date</span></span>
+            </a>
+
+            <div class="login-decoration">
+                <span>♥</span>
+            </div>
+
+            <div class="login-heading">
+                <p class="login-eyebrow">NOSSO CANTINHO PARTICULAR</p>
+
+                <h1>Que bom ter vocês <span>de volta.</span></h1>
+
+                <p>
+                    Entre para continuar guardando os filmes
+                    e momentos especiais de vocês.
+                </p>
+            </div>
+
+            <form id="loginForm">
+
+                <div class="login-field">
+                    <label for="email">E-mail</label>
+
+                    <input
+                        type="email"
+                        id="email"
+                        placeholder="Digite o e-mail da conta"
+                        autocomplete="username"
+                        required>
+                </div>
+
+                <div class="login-field">
+                    <label for="senha">Senha</label>
+
+                    <input
+                        type="password"
+                        id="senha"
+                        placeholder="Digite sua senha"
+                        autocomplete="current-password"
+                        required>
+                </div>
+
+                <p id="loginMensagem" class="login-message" role="alert"></p>
+
+                <button type="submit" id="loginButton" class="login-button">
+                    Entrar no CineDate
+                    <span>→</span>
+                </button>
+
+            </form>
+
+            <div class="login-footer">
+                <span>♥</span>
+                Feito com amor para guardar nossas histórias.
+            </div>
+
+        </section>
+
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script src="/js/supabase.js"></script>
+    <script src="/js/login.js"></script>
+
+</body>
+
+</html>

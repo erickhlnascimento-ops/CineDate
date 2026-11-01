@@ -1,0 +1,466 @@
+/* =========================================
+   CINE DATE - MEMÓRIAS
+========================================= */
+
+.memories-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 24px;
+    margin-bottom: 32px;
+}
+
+.eyebrow {
+    color: #b18aff;
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 2px;
+    margin-bottom: 10px;
+}
+
+.memories-header h1 {
+    font-size: clamp(28px, 4vw, 38px);
+    margin: 0;
+    color: #ffffff;
+}
+
+.memories-header h1 span {
+    color: #c084fc;
+}
+
+.page-description {
+    color: #a7a0b7;
+    font-size: 14px;
+    margin-top: 12px;
+    line-height: 1.6;
+}
+
+.add-memory-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: 13px 18px;
+    background: linear-gradient(135deg, #9b5cff, #7439d9);
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 700;
+    border-radius: 12px;
+    white-space: nowrap;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.add-memory-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(155, 92, 255, 0.25);
+}
+
+/* =========================================
+   ESTATÍSTICAS
+========================================= */
+
+.memory-stats {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 18px;
+    margin-bottom: 42px;
+}
+
+.memory-stat-card {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    padding: 22px;
+    background: #171421;
+    border: 1px solid #2b243a;
+    border-radius: 16px;
+    transition: border-color 0.2s, transform 0.2s;
+}
+
+.memory-stat-card:hover {
+    border-color: #7448a8;
+    transform: translateY(-2px);
+}
+
+.stat-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 48px;
+    height: 48px;
+    flex-shrink: 0;
+    border-radius: 14px;
+    background: rgba(165, 105, 255, 0.12);
+    font-size: 22px;
+}
+
+.memory-stat-card p {
+    margin: 0 0 7px;
+    color: #a7a0b7;
+    font-size: 12px;
+}
+
+.memory-stat-card h2 {
+    margin: 0;
+    color: #ffffff;
+    font-size: 27px;
+}
+
+/* =========================================
+   CABEÇALHO DA LINHA DO TEMPO
+========================================= */
+
+.timeline-section {
+    margin-top: 10px;
+}
+
+.section-heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    gap: 15px;
+    margin-bottom: 30px;
+}
+
+.section-heading h2 {
+    color: #ffffff;
+    font-size: 23px;
+    margin: 0;
+}
+
+#contadorMemorias {
+    color: #b7aec8;
+    background: #211b2d;
+    border: 1px solid #352a47;
+    padding: 8px 12px;
+    border-radius: 20px;
+    font-size: 11px;
+    white-space: nowrap;
+}
+
+/* =========================================
+   LINHA DO TEMPO
+========================================= */
+
+.timeline {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 28px;
+    padding-left: 32px;
+}
+
+.timeline::before {
+    content: "";
+    position: absolute;
+    top: 12px;
+    bottom: 12px;
+    left: 8px;
+    width: 2px;
+    background: linear-gradient(
+        to bottom,
+        #a66cff,
+        #49305e,
+        rgba(73, 48, 94, 0.1)
+    );
+}
+
+.memory-entry {
+    position: relative;
+    min-width: 0;
+}
+
+.memory-entry::before {
+    content: "";
+    position: absolute;
+    top: 25px;
+    left: -29px;
+    width: 12px;
+    height: 12px;
+    background: #b37aff;
+    border: 3px solid #171421;
+    border-radius: 50%;
+    box-shadow: 0 0 0 2px #8c52d6;
+    z-index: 1;
+}
+
+.memory-date {
+    color: #c5a5ff;
+    font-size: 12px;
+    font-weight: 700;
+    margin: 0 0 12px;
+    letter-spacing: 0.3px;
+}
+
+.memory-card {
+    display: grid;
+    grid-template-columns: 150px minmax(0, 1fr);
+    gap: 22px;
+    padding: 20px;
+    background: #171421;
+    border: 1px solid #2b243a;
+    border-radius: 18px;
+    transition: border-color 0.2s, transform 0.2s;
+}
+
+.memory-card:hover {
+    border-color: #6e468f;
+    transform: translateY(-2px);
+}
+
+/* =========================================
+   PÔSTER
+========================================= */
+
+.memory-poster {
+    width: 150px;
+    height: 215px;
+    border-radius: 12px;
+    overflow: hidden;
+    background: #262032;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #b9a8d5;
+    font-size: 35px;
+}
+
+.memory-poster img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+}
+
+/* =========================================
+   INFORMAÇÕES DO FILME
+========================================= */
+
+.memory-content {
+    min-width: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+.memory-title-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 15px;
+}
+
+.memory-title {
+    color: #ffffff;
+    font-size: 20px;
+    line-height: 1.4;
+    margin: 0;
+    overflow-wrap: anywhere;
+}
+
+.memory-year {
+    color: #9389a6;
+    font-size: 12px;
+    margin-top: 5px;
+}
+
+.memory-average {
+    flex-shrink: 0;
+    padding: 8px 10px;
+    background: rgba(166, 108, 255, 0.12);
+    border: 1px solid rgba(166, 108, 255, 0.2);
+    border-radius: 10px;
+    color: #d2b6ff;
+    font-size: 13px;
+    font-weight: 800;
+}
+
+.memory-cinema {
+    color: #b9afca;
+    font-size: 12px;
+    margin: 14px 0 18px;
+}
+
+.memory-notes {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 12px;
+    margin-bottom: 17px;
+}
+
+.memory-note {
+    padding: 12px;
+    border-radius: 11px;
+    background: #211b2d;
+}
+
+.memory-note-label {
+    color: #a99fbb;
+    font-size: 11px;
+    margin-bottom: 7px;
+}
+
+.memory-note-value {
+    color: #f2d38c;
+    font-size: 14px;
+    font-weight: 800;
+}
+
+.memory-comment {
+    margin-top: auto;
+    padding: 13px 15px;
+    border-left: 3px solid #9661d5;
+    background: rgba(150, 97, 213, 0.07);
+    border-radius: 0 10px 10px 0;
+}
+
+.memory-comment p {
+    color: #c8bfd8;
+    font-size: 12px;
+    line-height: 1.7;
+    margin: 0;
+    overflow-wrap: anywhere;
+}
+
+.memory-comment-label {
+    color: #b18aff;
+    font-size: 10px;
+    font-weight: 800;
+    letter-spacing: 1px;
+    margin-bottom: 6px;
+}
+
+/* =========================================
+   ESTADO VAZIO
+========================================= */
+
+.empty-memories {
+    text-align: center;
+    padding: 55px 25px;
+    background: #171421;
+    border: 1px dashed #49365e;
+    border-radius: 18px;
+}
+
+.empty-icon {
+    font-size: 45px;
+    margin-bottom: 18px;
+}
+
+.empty-memories h3 {
+    color: #ffffff;
+    font-size: 20px;
+    margin: 0 0 12px;
+}
+
+.empty-memories p {
+    max-width: 450px;
+    margin: 0 auto 22px;
+    color: #a7a0b7;
+    font-size: 13px;
+    line-height: 1.8;
+}
+
+.empty-memories a {
+    display: inline-block;
+    color: #ffffff;
+    background: #8148d4;
+    padding: 12px 18px;
+    border-radius: 10px;
+    text-decoration: none;
+    font-size: 12px;
+    font-weight: 700;
+}
+
+.empty-memories a:hover {
+    background: #965ce9;
+}
+
+/* =========================================
+   RODAPÉ
+========================================= */
+
+.memories-footer {
+    margin-top: 45px;
+    padding: 25px 0;
+    border-top: 1px solid #2b243a;
+    text-align: center;
+}
+
+.memories-footer p {
+    color: #9389a6;
+    font-size: 12px;
+}
+
+/* =========================================
+   RESPONSIVIDADE
+========================================= */
+
+@media (max-width: 1000px) {
+    .memory-stats {
+        grid-template-columns: 1fr;
+        gap: 12px;
+    }
+
+    .memory-stat-card {
+        padding: 17px;
+    }
+
+    .memory-card {
+        grid-template-columns: 120px minmax(0, 1fr);
+        gap: 17px;
+    }
+
+    .memory-poster {
+        width: 120px;
+        height: 180px;
+    }
+}
+
+@media (max-width: 650px) {
+    .memories-header {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    .add-memory-button {
+        width: 100%;
+    }
+
+    .memory-card {
+        grid-template-columns: 1fr;
+    }
+
+    .memory-poster {
+        width: 100%;
+        height: 240px;
+    }
+
+    .memory-title {
+        font-size: 18px;
+    }
+
+    .memory-title-row {
+        flex-wrap: wrap;
+    }
+
+    .memory-notes {
+        gap: 8px;
+    }
+
+    .timeline {
+        padding-left: 27px;
+    }
+
+    .timeline::before {
+        left: 5px;
+    }
+
+    .memory-entry::before {
+        left: -27px;
+    }
+
+    .section-heading h2 {
+        font-size: 19px;
+    }
+}

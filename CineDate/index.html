@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>CineDate ❤️ | Nossa história no cinema</title>
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/inicio.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Outfit:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
+    <script src="js/inicio.js" defer></script>
+</head>
+
+<body>
+
+    <aside class="sidebar">
+
+        <a href="index.html" class="logo">
+            <span class="logo-icon">▶</span>
+            <span>Cine<span class="logo-highlight">Date</span></span>
+        </a>
+
+        <div class="menu-section">
+
+            <p class="menu-title">MENU PRINCIPAL</p>
+
+            <a href="index.html" class="menu-item active">
+                <span class="menu-icon">⌂</span>
+                <span>Início</span>
+            </a>
+
+            <a href="pages/ranking.html" class="menu-item">
+                <span class="menu-icon">♛</span>
+                <span>Nosso ranking</span>
+            </a>
+
+            <a href="pages/filmes.html" class="menu-item">
+                <span class="menu-icon">▣</span>
+                <span>Filmes assistidos</span>
+            </a>
+
+            <a href="pages/memorias.html" class="menu-item">
+                <span class="menu-icon">♡</span>
+                <span>Nossas memórias</span>
+            </a>
+
+            <a href="#estatisticas" class="menu-item">
+                <span class="menu-icon">▥</span>
+                <span>Estatísticas</span>
+            </a>
+
+            <a href="pages/adicionar-filme.html" class="menu-item">
+                <span class="menu-icon">＋</span>
+                <span>Adicionar filme</span>
+            </a>
+
+        </div>
+
+        <div class="sidebar-bottom">
+
+            <div class="couple-card">
+                <div class="couple-heart">♥</div>
+
+                <p class="couple-title">Nosso cantinho</p>
+
+                <p class="couple-description">
+                    Uma coleção de filmes e momentos especiais.
+                </p>
+            </div>
+
+            <p class="sidebar-footer">
+                Feito com ♥ para nós dois.
+            </p>
+
+            <button id="logoutButton" class="logout-button">
+                <span class="menu-icon">↪</span>
+                <span>Sair da conta</span>
+            </button>
+
+        </div>
+
+    </aside>
+
+    <main class="main-content">
+
+        <header class="topbar">
+
+            <div class="breadcrumb">
+                Nosso espaço <span>/</span> Início
+            </div>
+
+            <div class="topbar-actions">
+
+                <span class="private-badge">
+                    <span class="status-dot"></span>
+                    Nosso espaço privado
+                </span>
+
+                <div class="couple-avatar">
+                    <span>♥</span>
+                </div>
+
+            </div>
+
+        </header>
+
+        <!-- BANNER ORIGINAL -->
+
+        <section class="hero">
+
+            <div class="hero-content">
+
+                <span class="hero-label">
+                    <span>♥</span> NOSSA HISTÓRIA EM FILMES
+                </span>
+
+                <h1>
+                    Cada filme,<br>
+                    uma história <span>nossa.</span>
+                </h1>
+
+                <p class="hero-description">
+                    Dos encontros inesperados aos finais inesquecíveis.
+                    Aqui guardamos cada filme que vivemos juntos.
+                </p>
+
+                <div class="hero-buttons">
+
+                    <a href="pages/ranking.html" class="button-primary">
+                        <span>▶</span>
+                        Explorar ranking
+                    </a>
+
+                    <a href="pages/filmes.html" class="button-secondary">
+                        Ver nossos filmes
+                    </a>
+
+                </div>
+
+                <div class="hero-footer">
+                    <span class="hero-heart">♥</span>
+                    <span>Uma história que continua a cada sessão.</span>
+                </div>
+
+            </div>
+
+            <div class="hero-decoration">
+
+                <div class="hero-orbit orbit-one"></div>
+                <div class="hero-orbit orbit-two"></div>
+
+                <div class="hero-heart-large">♥</div>
+
+                <div class="floating-note note-one">
+                    <span>✦</span> Nosso filme favorito
+                </div>
+
+                <div class="floating-note note-two">
+                    <span>♥</span> Feito para nós
+                </div>
+
+                <div class="hero-decoration-text">
+                    OUR STORY<br>
+                    OUR MOVIES
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- ESTATÍSTICAS DINÂMICAS -->
+
+        <section class="stats-section" id="estatisticas">
+
+            <div class="section-heading">
+
+                <div>
+                    <p class="eyebrow">NOSSA COLEÇÃO</p>
+                    <h2>Um pouquinho da gente</h2>
+                </div>
+
+                <span class="section-heart">♥</span>
+
+            </div>
+
+            <div class="stats-grid">
+
+                <article class="stat-card">
+                    <div class="stat-icon purple">▣</div>
+
+                    <div class="stat-info">
+                        <p>Filmes assistidos</p>
+                        <h3 id="inicioTotalFilmes">0</h3>
+                        <span class="stat-caption">
+                            Histórias compartilhadas
+                        </span>
+                    </div>
+                </article>
+
+                <article class="stat-card">
+                    <div class="stat-icon yellow">★</div>
+
+                    <div class="stat-info">
+                        <p>Nota média do casal</p>
+                        <h3>
+                            <span id="inicioMediaCasal">—</span>
+                            <span class="small-number">/10</span>
+                        </h3>
+                        <span class="stat-caption">
+                            Nosso gosto cinematográfico
+                        </span>
+                    </div>
+                </article>
+
+                <article class="stat-card">
+                    <div class="stat-icon pink">♥</div>
+
+                    <div class="stat-info">
+                        <p>Sessões compartilhadas</p>
+                        <h3 id="inicioTotalSessoes">0</h3>
+                        <span class="stat-caption">
+                            Momentos para recordar
+                        </span>
+                    </div>
+                </article>
+
+                <article class="stat-card">
+                    <div class="stat-icon blue">♛</div>
+
+                    <div class="stat-info">
+                        <p>Nosso favorito</p>
+                        <h3 class="favorite-title" id="inicioMelhorFilme">
+                            Ainda não avaliado
+                        </h3>
+                        <span class="stat-caption">
+                            <span class="star">★</span>
+                            <span id="inicioMelhorNota">—</span>
+                        </span>
+                    </div>
+                </article>
+
+            </div>
+
+        </section>
+
+        <!-- RANKING DINÂMICO -->
+
+        <section class="ranking-section" id="ranking">
+
+            <div class="section-heading">
+
+                <div>
+                    <p class="eyebrow">OS MAIS INESQUECÍVEIS</p>
+                    <h2>Nosso ranking <span class="heading-heart">♥</span></h2>
+                    <p class="section-description">
+                        Os filmes que conquistaram nossos corações.
+                    </p>
+                </div>
+
+                <a href="pages/ranking.html" class="view-all">
+                    Ver ranking completo <span>→</span>
+                </a>
+
+            </div>
+
+            <div class="movies-grid" id="inicioRankingFilmes"></div>
+
+            <div id="inicioRankingVazio" class="inicio-vazio" hidden>
+                <span>🏆</span>
+                <h3>Nosso ranking está esperando!</h3>
+                <p>
+                    Cadastrem os filmes e adicionem suas notas
+                    para descobrir os favoritos do casal.
+                </p>
+                <a href="pages/adicionar-filme.html">
+                    Registrar primeiro filme
+                </a>
+            </div>
+
+        </section>
+
+        <!-- HISTÓRICO DINÂMICO -->
+
+        <section class="history-section" id="historico">
+
+            <div class="section-heading">
+
+                <div>
+                    <p class="eyebrow">RECENTEMENTE</p>
+                    <h2>Nossas últimas sessões</h2>
+                </div>
+
+                <a href="pages/filmes.html" class="view-all">
+                    Ver histórico <span>→</span>
+                </a>
+
+            </div>
+
+            <div id="inicioHistoricoFilmes"></div>
+
+            <div id="inicioHistoricoVazio" class="inicio-vazio" hidden>
+                <span>🍿</span>
+                <h3>Nenhuma sessão registrada ainda</h3>
+                <p>
+                    O próximo filme pode ser o começo de uma
+                    lembrança especial.
+                </p>
+                <a href="pages/adicionar-filme.html">
+                    Registrar sessão
+                </a>
+            </div>
+
+        </section>
+
+        <!-- MEMÓRIAS -->
+
+        <section class="memories-section" id="memorias">
+
+            <div class="memory-content">
+
+                <span class="memory-icon">♡</span>
+
+                <div>
+                    <p class="eyebrow">MAIS QUE FILMES</p>
+                    <h2>Cada sessão tem uma história.</h2>
+                    <p>
+                        Os filmes acabam, mas as lembranças ficam.
+                        Que tal registrar os momentos mais especiais?
+                    </p>
+                </div>
+
+                <a href="pages/memorias.html" class="button-primary">
+                    Rever nossas histórias →
+                </a>
+
+            </div>
+
+        </section>
+
+        <footer class="footer">
+
+            <p>CineDate © 2026</p>
+
+            <p>
+                Feito com <span>♥</span> para guardar nossa história.
+            </p>
+
+        </footer>
+
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script src="js/supabase.js"></script>
+    <script src="js/proteger-pagina.js"></script>
+
+</body>
+
+</html>

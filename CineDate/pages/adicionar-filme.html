@@ -1,0 +1,387 @@
+```html
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Adicionar Filme | CineDate</title>
+
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="../css/cadastro.css">
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Outfit:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+
+    <div class="app-container">
+
+        <!-- MENU LATERAL ORIGINAL DO CINEDATE -->
+        <aside class="sidebar">
+
+            <a href="../index.html" class="logo">
+                <span class="logo-icon">▶</span>
+                <span>Cine<span class="logo-highlight">Date</span></span>
+            </a>
+
+            <div class="menu-section">
+
+                <p class="menu-title">MENU PRINCIPAL</p>
+
+                <a href="../index.html" class="menu-item">
+                    <span class="menu-icon">⌂</span>
+                    <span>Início</span>
+                </a>
+
+                <a href="ranking.html" class="menu-item">
+                    <span class="menu-icon">♛</span>
+                    <span>Nosso ranking</span>
+                </a>
+
+                <a href="filmes.html" class="menu-item">
+                    <span class="menu-icon">▣</span>
+                    <span>Filmes assistidos</span>
+                </a>
+
+                <a href="memorias.html" class="menu-item">
+                    <span class="menu-icon">♡</span>
+                    <span>Nossas memórias</span>
+                </a>
+
+                <a href="../index.html#estatisticas" class="menu-item">
+                    <span class="menu-icon">▥</span>
+                    <span>Estatísticas</span>
+                </a>
+
+                <a href="adicionar-filme.html" class="menu-item active">
+                    <span class="menu-icon">＋</span>
+                    <span>Adicionar filme</span>
+                </a>
+
+            </div>
+
+            <div class="sidebar-bottom">
+
+                <div class="couple-card">
+
+                    <div class="couple-heart">♥</div>
+
+                    <p class="couple-title">Nosso cantinho</p>
+
+                    <p class="couple-description">
+                        Uma coleção de filmes e momentos especiais.
+                    </p>
+
+                </div>
+
+                <p class="sidebar-footer">
+                    Feito com ♥ para nós dois.
+                </p>
+
+            </div>
+
+        </aside>
+
+        <!-- CONTEÚDO PRINCIPAL -->
+        <main class="main-content">
+
+            <header class="topbar">
+                <div>
+                    <p class="breadcrumb">
+                        <a href="../index.html">Início</a>
+                        <span>/</span>
+                        Adicionar filme
+                    </p>
+
+                    <h1>Adicionar filme 🎬</h1>
+
+                    <p class="page-subtitle">
+                        Mais um filme para guardar na nossa história.
+                    </p>
+                </div>
+
+                <a href="../index.html" class="back-button">
+                    ← Voltar
+                </a>
+            </header>
+
+            <!-- MENSAGEM DE DESTAQUE -->
+            <section class="welcome-card">
+                <div class="welcome-icon">🍿</div>
+
+                <div>
+                    <h2>Todo filme tem uma história.</h2>
+                    <p>
+                        Registre o que vocês assistiram, deem suas notas
+                        e guardem os detalhes desse momento juntos.
+                    </p>
+                </div>
+
+                <div class="welcome-decoration">♥</div>
+            </section>
+
+            <!-- FORMULÁRIO -->
+            <form class="movie-form" action="#" method="get">
+
+                <!-- INFORMAÇÕES DO FILME -->
+                <section class="form-card">
+
+                    <div class="section-heading">
+                        <div class="heading-icon">🎞️</div>
+
+                        <div>
+                            <h2>Informações do filme</h2>
+                            <p>Vamos começar pelo filme que vocês assistiram.</p>
+                        </div>
+                    </div>
+
+                    <div class="form-grid">
+
+                        <div class="form-group full-width">
+                            <label for="titulo">Título do filme *</label>
+
+                            <input type="text" id="titulo" name="titulo" placeholder="Ex.: Como Treinar o Seu Dragão"
+                                required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="ano">Ano de lançamento</label>
+
+                            <input type="number" id="ano" name="ano" placeholder="2026" min="1888" max="2100">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="genero">Gênero</label>
+
+                            <select id="genero" name="genero">
+                                <option value="">Selecione um gênero</option>
+                                <option value="acao">Ação</option>
+                                <option value="animacao">Animação</option>
+                                <option value="aventura">Aventura</option>
+                                <option value="comedia">Comédia</option>
+                                <option value="drama">Drama</option>
+                                <option value="fantasia">Fantasia</option>
+                                <option value="ficcao">Ficção científica</option>
+                                <option value="romance">Romance</option>
+                                <option value="suspense">Suspense</option>
+                                <option value="terror">Terror</option>
+                                <option value="outro">Outro</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group full-width">
+                            <label for="poster">URL do pôster</label>
+
+                            <input type="url" id="poster" name="poster" placeholder="https://exemplo.com/poster.jpg">
+
+                            <small>
+                                Por enquanto, você pode inserir o endereço
+                                de uma imagem do filme.
+                            </small>
+                        </div>
+
+                    </div>
+
+                </section>
+
+                <!-- INFORMAÇÕES DA SESSÃO -->
+                <section class="form-card">
+
+                    <div class="section-heading">
+                        <div class="heading-icon">🍿</div>
+
+                        <div>
+                            <h2>Nosso encontro</h2>
+                            <p>Registre os detalhes da sessão.</p>
+                        </div>
+                    </div>
+
+                    <div class="form-grid">
+
+                        <div class="form-group">
+                            <label for="data">Data em que assistimos *</label>
+
+                            <input type="date" id="data" name="data" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="tipo">Tipo de sessão</label>
+
+                            <select id="tipo" name="tipo">
+                                <option value="">Selecione</option>
+                                <option value="2d">2D</option>
+                                <option value="3d">3D</option>
+                                <option value="imax">IMAX</option>
+                                <option value="vip">VIP</option>
+                                <option value="4dx">4DX</option>
+                                <option value="outro">Outro</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group full-width">
+                            <label for="cinema">Nome do cinema</label>
+
+                            <input type="text" id="cinema" name="cinema" placeholder="Ex.: Cinemark, Kinoplex...">
+                        </div>
+
+                    </div>
+
+                </section>
+
+                <!-- AVALIAÇÕES -->
+                <section class="form-card">
+
+                    <div class="section-heading">
+                        <div class="heading-icon">⭐</div>
+
+                        <div>
+                            <h2>Nossas avaliações</h2>
+                            <p>
+                                Cada um tem sua opinião. Registre as duas notas!
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="ratings-grid">
+
+                        <!-- AVALIAÇÃO 1 -->
+                        <div class="rating-card">
+
+                            <div class="rating-avatar">💜</div>
+
+                            <h3>Sua avaliação</h3>
+
+                            <p class="rating-description">
+                                O que você achou do filme?
+                            </p>
+
+                            <div class="form-group">
+                                <label for="nota1">Sua nota *</label>
+
+                                <select id="nota1" name="nota1" required>
+                                    <option value="">Escolha uma nota</option>
+                                    <option value="1">1 — Péssimo</option>
+                                    <option value="2">2 — Ruim</option>
+                                    <option value="3">3 — Regular</option>
+                                    <option value="4">4 — Razoável</option>
+                                    <option value="5">5 — Bom</option>
+                                    <option value="6">6 — Legal</option>
+                                    <option value="7">7 — Muito bom</option>
+                                    <option value="8">8 — Ótimo</option>
+                                    <option value="9">9 — Excelente</option>
+                                    <option value="10">10 — Perfeito!</option>
+                                </select>
+                            </div>
+
+                        </div>
+
+                        <!-- AVALIAÇÃO 2 -->
+                        <div class="rating-card">
+
+                            <div class="rating-avatar">💕</div>
+
+                            <h3>Avaliação da sua namorada</h3>
+
+                            <p class="rating-description">
+                                Qual foi a opinião dela?
+                            </p>
+
+                            <div class="form-group">
+                                <label for="nota2">Nota dela *</label>
+
+                                <select id="nota2" name="nota2" required>
+                                    <option value="">Escolha uma nota</option>
+                                    <option value="1">1 — Péssimo</option>
+                                    <option value="2">2 — Ruim</option>
+                                    <option value="3">3 — Regular</option>
+                                    <option value="4">4 — Razoável</option>
+                                    <option value="5">5 — Bom</option>
+                                    <option value="6">6 — Legal</option>
+                                    <option value="7">7 — Muito bom</option>
+                                    <option value="8">8 — Ótimo</option>
+                                    <option value="9">9 — Excelente</option>
+                                    <option value="10">10 — Perfeito!</option>
+                                </select>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                    <div class="average-preview">
+                        <span class="average-icon">♡</span>
+
+                        <div>
+                            <strong>Nossa nota será especial!</strong>
+
+                            <p>
+                                Depois de salvar, poderemos calcular a média
+                                das avaliações para o ranking do casal.
+                            </p>
+                        </div>
+                    </div>
+
+                </section>
+
+                <!-- MEMÓRIAS -->
+                <section class="form-card">
+
+                    <div class="section-heading">
+                        <div class="heading-icon">💌</div>
+
+                        <div>
+                            <h2>Uma memória para guardar</h2>
+                            <p>Os detalhes que fazem esse filme ser especial.</p>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="comentario">
+                            Comentários e lembranças
+                        </label>
+
+                        <textarea id="comentario" name="comentario" rows="5"
+                            placeholder="Qual foi a parte favorita? Vocês riram, choraram ou ficaram comentando o filme depois? Escreva aqui..."></textarea>
+
+                        <small>
+                            Guarde aqui aquela lembrança que vocês não querem esquecer.
+                        </small>
+                    </div>
+
+                </section>
+
+                <!-- BOTÕES -->
+                <div class="form-actions">
+
+                    <a href="../index.html" class="cancel-button">
+                        Cancelar
+                    </a>
+
+                    <button type="submit" class="save-button">
+                        <span>♡</span>
+                        Salvar filme
+                    </button>
+
+                </div>
+
+                <p class="form-disclaimer">
+                    Feito com amor para guardar nossas histórias. 💜
+                </p>
+
+            </form>
+
+        </main>
+
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script src="../js/supabase.js"></script>
+    <script src="../js/cadastro.js"></script>
+    <script src="../js/proteger-pagina.js"></script>
+
+</body>
+
+</html>
