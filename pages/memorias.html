@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Memórias | CineDate</title>
+
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="../css/memorias.css">
+
+    <script src="../js/memorias.js" defer></script>
+</head>
+
+<body>
+
+    <div class="app-container">
+
+        <!-- MENU LATERAL -->
+        <aside class="sidebar">
+
+            <a href="../index.html" class="logo">
+                <span class="logo-icon">▶</span>
+                <span>Cine<span class="logo-highlight">Date</span></span>
+            </a>
+
+            <div class="menu-section">
+
+                <p class="menu-title">MENU PRINCIPAL</p>
+
+                <a href="../index.html" class="menu-item">
+                    <span class="menu-icon">⌂</span>
+                    <span>Início</span>
+                </a>
+
+                <a href="ranking.html" class="menu-item">
+                    <span class="menu-icon">♛</span>
+                    <span>Nosso ranking</span>
+                </a>
+
+                <a href="filmes.html" class="menu-item">
+                    <span class="menu-icon">▣</span>
+                    <span>Filmes assistidos</span>
+                </a>
+
+                <a href="memorias.html" class="menu-item active">
+                    <span class="menu-icon">♡</span>
+                    <span>Nossas memórias</span>
+                </a>
+
+                <a href="../index.html#estatisticas" class="menu-item">
+                    <span class="menu-icon">▥</span>
+                    <span>Estatísticas</span>
+                </a>
+
+                <a href="adicionar-filme.html" class="menu-item">
+                    <span class="menu-icon">＋</span>
+                    <span>Adicionar filme</span>
+                </a>
+
+            </div>
+
+            <div class="sidebar-bottom">
+
+                <div class="couple-card">
+
+                    <div class="couple-heart">♥</div>
+
+                    <p class="couple-title">Nosso cantinho</p>
+
+                    <p class="couple-description">
+                        Uma coleção de filmes e momentos especiais.
+                    </p>
+
+                </div>
+
+                <p class="sidebar-footer">
+                    Feito com ♥ para nós dois.
+                </p>
+
+            </div>
+
+        </aside>
+
+        <!-- CONTEÚDO PRINCIPAL -->
+        <main class="main-content">
+
+            <header class="memories-header">
+                <div>
+                    <p class="eyebrow">NOSSA HISTÓRIA</p>
+                    <h1>Nossas memórias <span>♡</span></h1>
+
+                    <p class="page-description">
+                        Cada sessão, uma história. Cada filme, uma lembrança nossa.
+                    </p>
+                </div>
+
+                <a href="adicionar-filme.html" class="add-memory-button">
+                    ＋ Registrar filme
+                </a>
+            </header>
+
+            <!-- RESUMO -->
+            <section class="memory-stats">
+
+                <article class="memory-stat-card">
+                    <div class="stat-icon">🎬</div>
+
+                    <div>
+                        <p>Filmes assistidos</p>
+                        <h2 id="totalFilmes">0</h2>
+                    </div>
+                </article>
+
+                <article class="memory-stat-card">
+                    <div class="stat-icon">🍿</div>
+
+                    <div>
+                        <p>Idas ao cinema</p>
+                        <h2 id="totalSessoes">0</h2>
+                    </div>
+                </article>
+
+                <article class="memory-stat-card">
+                    <div class="stat-icon">❤️</div>
+
+                    <div>
+                        <p>Nossa média</p>
+                        <h2 id="mediaCasal">—</h2>
+                    </div>
+                </article>
+
+            </section>
+
+            <!-- LINHA DO TEMPO -->
+            <section class="timeline-section">
+
+                <div class="section-heading">
+                    <div>
+                        <p class="eyebrow">RECORDAÇÕES</p>
+                        <h2>Nossa linha do tempo</h2>
+                    </div>
+
+                    <span id="contadorMemorias">0 memórias</span>
+                </div>
+
+                <div id="listaMemorias" class="timeline">
+
+                    <!-- As memórias serão inseridas pelo JavaScript -->
+
+                </div>
+
+                <div id="estadoVazio" class="empty-memories" hidden>
+                    <div class="empty-icon">🎞️</div>
+
+                    <h3>Nossa história começa aqui</h3>
+
+                    <p>
+                        Registrem o primeiro filme que assistiram juntas
+                        e comecem a construir essa coleção de lembranças.
+                    </p>
+
+                    <a href="adicionar-filme.html">
+                        Registrar nossa primeira memória
+                    </a>
+                </div>
+
+            </section>
+
+            <footer class="memories-footer">
+                <p>Algumas histórias merecem ser assistidas mais de uma vez. ❤️</p>
+            </footer>
+
+        </main>
+
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script src="../js/supabase.js"></script>
+    <script src="../js/proteger-pagina.js"></script>
+</body>
+</html>

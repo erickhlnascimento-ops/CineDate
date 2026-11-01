@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Filmes Assistidos | CineDate</title>
+
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="../css/filmes.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Outfit:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+
+    <div class="app-container">
+
+        <!-- MENU LATERAL -->
+        <aside class="sidebar">
+
+            <a href="../index.html" class="logo">
+                <span class="logo-icon">▶</span>
+                <span>Cine<span class="logo-highlight">Date</span></span>
+            </a>
+
+            <div class="menu-section">
+
+                <p class="menu-title">MENU PRINCIPAL</p>
+
+                <a href="../index.html" class="menu-item">
+                    <span class="menu-icon">⌂</span>
+                    <span>Início</span>
+                </a>
+
+                <a href="ranking.html" class="menu-item">
+                    <span class="menu-icon">♛</span>
+                    <span>Nosso ranking</span>
+                </a>
+
+                <a href="filmes.html" class="menu-item active">
+                    <span class="menu-icon">▣</span>
+                    <span>Filmes assistidos</span>
+                </a>
+
+                <a href="memorias.html" class="menu-item">
+                    <span class="menu-icon">♡</span>
+                    <span>Nossas memórias</span>
+                </a>
+
+                <a href="../index.html#estatisticas" class="menu-item">
+                    <span class="menu-icon">▥</span>
+                    <span>Estatísticas</span>
+                </a>
+
+                <a href="adicionar-filme.html" class="menu-item">
+                    <span class="menu-icon">＋</span>
+                    <span>Adicionar filme</span>
+                </a>
+
+            </div>
+
+            <div class="sidebar-bottom">
+
+                <div class="couple-card">
+
+                    <div class="couple-heart">♥</div>
+
+                    <p class="couple-title">Nosso cantinho</p>
+
+                    <p class="couple-description">
+                        Uma coleção de filmes e momentos especiais.
+                    </p>
+
+                </div>
+
+                <p class="sidebar-footer">
+                    Feito com ♥ para nós dois.
+                </p>
+
+            </div>
+
+        </aside>
+
+        <!-- CONTEÚDO -->
+        <main class="main-content">
+
+            <header class="films-header">
+
+                <div>
+                    <p class="breadcrumb">
+                        <a href="../index.html">Início</a>
+                        <span>/</span>
+                        Filmes assistidos
+                    </p>
+
+                    <h1>Nossos filmes 🎬</h1>
+
+                    <p class="page-subtitle">
+                        Todos os filmes que fazem parte da nossa história.
+                    </p>
+                </div>
+
+                <a href="adicionar-filme.html" class="add-film-button">
+                    <span>＋</span>
+                    Adicionar filme
+                </a>
+
+            </header>
+
+            <!-- ESTATÍSTICAS -->
+            <section class="films-stats">
+
+                <article class="film-stat-card">
+                    <div class="film-stat-icon purple">🎬</div>
+
+                    <div>
+                        <span>Total de filmes</span>
+                        <strong id="totalFilmes">0</strong>
+                    </div>
+                </article>
+
+                <article class="film-stat-card">
+                    <div class="film-stat-icon yellow">⭐</div>
+
+                    <div>
+                        <span>Média do casal</span>
+                        <strong id="mediaCasal">—</strong>
+                    </div>
+                </article>
+
+                <article class="film-stat-card">
+                    <div class="film-stat-icon pink">💜</div>
+
+                    <div>
+                        <span>Favoritos</span>
+                        <strong id="totalFavoritos">0</strong>
+                    </div>
+                </article>
+
+            </section>
+
+            <!-- PESQUISA E FILTROS -->
+            <section class="films-toolbar">
+
+                <div class="films-search">
+
+                    <span>⌕</span>
+
+                    <input type="search" id="pesquisaFilmes" placeholder="Pesquisar por título ou cinema..."
+                        aria-label="Pesquisar filmes">
+
+                </div>
+
+                <select id="filtroGenero" aria-label="Filtrar por gênero">
+                    <option value="">Todos os gêneros</option>
+                    <option value="acao">Ação</option>
+                    <option value="animacao">Animação</option>
+                    <option value="aventura">Aventura</option>
+                    <option value="comedia">Comédia</option>
+                    <option value="drama">Drama</option>
+                    <option value="fantasia">Fantasia</option>
+                    <option value="ficcao">Ficção científica</option>
+                    <option value="romance">Romance</option>
+                    <option value="suspense">Suspense</option>
+                    <option value="terror">Terror</option>
+                    <option value="outro">Outro</option>
+                </select>
+
+                <select id="ordenacaoFilmes" aria-label="Ordenar filmes">
+                    <option value="recentes">Mais recentes</option>
+                    <option value="antigos">Mais antigos</option>
+                    <option value="maiorNota">Maior nota</option>
+                    <option value="menorNota">Menor nota</option>
+                    <option value="alfabetica">Ordem alfabética</option>
+                </select>
+
+            </section>
+
+            <!-- RESULTADOS -->
+            <section class="films-results">
+
+                <div class="films-results-header">
+
+                    <div>
+                        <h2>Nosso catálogo</h2>
+
+                        <p id="textoResultados">
+                            Carregando filmes...
+                        </p>
+                    </div>
+
+                </div>
+
+                <div id="listaFilmes" class="films-grid">
+
+                    <!-- Os cartões serão gerados pelo JavaScript. -->
+
+                </div>
+
+                <div id="estadoVazio" class="empty-state" hidden>
+
+                    <div class="empty-state-icon">🍿</div>
+
+                    <h3 id="tituloEstadoVazio">
+                        Nosso primeiro filme ainda está esperando!
+                    </h3>
+
+                    <p id="descricaoEstadoVazio">
+                        Cadastre o primeiro filme para começar a construir
+                        a história cinematográfica de vocês.
+                    </p>
+
+                    <a href="adicionar-filme.html" class="add-film-button">
+                        ＋ Adicionar primeiro filme
+                    </a>
+
+                </div>
+
+            </section>
+
+            <footer class="films-footer">
+                Feito com amor para guardar nossas histórias. 💜
+            </footer>
+
+        </main>
+        <!-- MODAL DE EDIÇÃO -->
+        <div id="modalEditarFilme" class="modal-overlay" hidden>
+
+            <div class="modal-content">
+
+                <div class="modal-header">
+                    <div>
+                        <span class="modal-subtitle">CINEDATE</span>
+                        <h2>Editar filme 🎬</h2>
+                        <p>Atualize os detalhes da nossa sessão.</p>
+                    </div>
+
+                    <button type="button" id="fecharModal" class="modal-close">
+                        &times;
+                    </button>
+                </div>
+
+                <form id="formEditarFilme">
+
+                    <div class="modal-form-grid">
+
+                        <div class="form-group full">
+                            <label for="editarTitulo">Título do filme</label>
+                            <input type="text" id="editarTitulo" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="editarAno">Ano</label>
+                            <input type="number" id="editarAno" min="1888" max="2100">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="editarGenero">Gênero</label>
+                            <select id="editarGenero">
+                                <option value="acao">Ação</option>
+                                <option value="animacao">Animação</option>
+                                <option value="aventura">Aventura</option>
+                                <option value="comedia">Comédia</option>
+                                <option value="drama">Drama</option>
+                                <option value="fantasia">Fantasia</option>
+                                <option value="ficcao">Ficção científica</option>
+                                <option value="romance">Romance</option>
+                                <option value="suspense">Suspense</option>
+                                <option value="terror">Terror</option>
+                                <option value="outro">Outro</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group full">
+                            <label for="editarPoster">URL do pôster</label>
+                            <input type="url" id="editarPoster">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="editarData">Data da sessão</label>
+                            <input type="date" id="editarData">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="editarCinema">Local</label>
+                            <input type="text" id="editarCinema">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="editarTipo">Tipo de sessão</label>
+                            <select id="editarTipo">
+                                <option value="">Selecione</option>
+                                <option value="2d">2D</option>
+                                <option value="3d">3D</option>
+                                <option value="imax">IMAX</option>
+                                <option value="vip">VIP</option>
+                                <option value="4dx">4DX</option>
+                                <option value="outro">Outro</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="editarNota1">Sua nota</label>
+                            <input type="number" id="editarNota1" min="0" max="10" step="0.1">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="editarNota2">Nota dela</label>
+                            <input type="number" id="editarNota2" min="0" max="10" step="0.1">
+                        </div>
+
+                        <div class="form-group full">
+                            <label for="editarComentario">Comentário</label>
+                            <textarea id="editarComentario" rows="4"></textarea>
+                        </div>
+
+                    </div>
+
+                    <div class="modal-actions">
+
+                        <button type="button" id="cancelarEdicao" class="modal-cancel">
+                            Cancelar
+                        </button>
+
+                        <button type="submit" id="salvarEdicao" class="modal-save">
+                            💜 Salvar alterações
+                        </button>
+
+                    </div>
+
+                </form>
+
+            </div>
+
+        </div>
+
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script src="../js/supabase.js"></script>
+    <script src="../js/filmes.js"></script>
+    <script src="../js/proteger-pagina.js"></script>
+
+</body>
+
+</html>

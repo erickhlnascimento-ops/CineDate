@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Nosso Ranking | CineDate</title>
+
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="../css/ranking.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Outfit:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+
+    <div class="app-container">
+
+        <!-- MENU LATERAL -->
+        <aside class="sidebar">
+
+            <a href="../index.html" class="logo">
+                <span class="logo-icon">▶</span>
+                <span>Cine<span class="logo-highlight">Date</span></span>
+            </a>
+
+            <div class="menu-section">
+
+                <p class="menu-title">MENU PRINCIPAL</p>
+
+                <a href="../index.html" class="menu-item">
+                    <span class="menu-icon">⌂</span>
+                    <span>Início</span>
+                </a>
+
+                <a href="ranking.html" class="menu-item active">
+                    <span class="menu-icon">♛</span>
+                    <span>Nosso ranking</span>
+                </a>
+
+                <a href="filmes.html" class="menu-item">
+                    <span class="menu-icon">▣</span>
+                    <span>Filmes assistidos</span>
+                </a>
+
+                <a href="memorias.html" class="menu-item">
+                    <span class="menu-icon">♡</span>
+                    <span>Nossas memórias</span>
+                </a>
+
+                <a href="../index.html#estatisticas" class="menu-item">
+                    <span class="menu-icon">▥</span>
+                    <span>Estatísticas</span>
+                </a>
+
+                <a href="adicionar-filme.html" class="menu-item">
+                    <span class="menu-icon">＋</span>
+                    <span>Adicionar filme</span>
+                </a>
+
+            </div>
+
+            <div class="sidebar-bottom">
+
+                <div class="couple-card">
+
+                    <div class="couple-heart">♥</div>
+
+                    <p class="couple-title">Nosso cantinho</p>
+
+                    <p class="couple-description">
+                        Uma coleção de filmes e momentos especiais.
+                    </p>
+
+                </div>
+
+                <p class="sidebar-footer">
+                    Feito com ♥ para nós dois.
+                </p>
+
+            </div>
+
+        </aside>
+
+        <!-- CONTEÚDO PRINCIPAL -->
+        <main class="main-content">
+
+            <header class="ranking-header">
+
+                <div>
+
+                    <p class="breadcrumb">
+                        <a href="../index.html">Início</a>
+                        <span>/</span>
+                        Nosso ranking
+                    </p>
+
+                    <h1>Nosso ranking 🏆</h1>
+
+                    <p class="page-subtitle">
+                        Os filmes que conquistaram nossos corações.
+                    </p>
+
+                </div>
+
+                <a href="adicionar-filme.html" class="ranking-add-button">
+                    ＋ Adicionar filme
+                </a>
+
+            </header>
+
+            <!-- DESTAQUE DO CAMPEÃO -->
+            <section class="ranking-hero" id="rankingHero">
+
+                <div class="ranking-hero-content">
+
+                    <span class="ranking-eyebrow">
+                        💜 NOSSO FAVORITO
+                    </span>
+
+                    <h2 id="campeaoTitulo">
+                        Nosso próximo favorito está esperando...
+                    </h2>
+
+                    <p id="campeaoDescricao">
+                        Assistam a mais filmes para descobrir qual vai conquistar
+                        o primeiro lugar no ranking de vocês.
+                    </p>
+
+                    <div class="champion-score">
+
+                        <span class="champion-star">★</span>
+
+                        <div>
+                            <strong id="campeaoNota">—</strong>
+                            <small>Nota média do casal</small>
+                        </div>
+
+                    </div>
+
+                    <a href="filmes.html" class="ranking-hero-link">
+                        Ver filmes assistidos →
+                    </a>
+
+                </div>
+
+                <div class="champion-poster" id="campeaoPoster">
+
+                    <div class="champion-poster-placeholder">
+                        🎬
+                    </div>
+
+                    <div class="champion-crown">👑</div>
+
+                </div>
+
+            </section>
+
+            <!-- ESTATÍSTICAS -->
+            <section class="ranking-stats">
+
+                <article class="ranking-stat-card">
+
+                    <div class="ranking-stat-icon">🎞️</div>
+
+                    <div>
+                        <span>Filmes avaliados</span>
+                        <strong id="totalAvaliados">0</strong>
+                    </div>
+
+                </article>
+
+                <article class="ranking-stat-card">
+
+                    <div class="ranking-stat-icon">⭐</div>
+
+                    <div>
+                        <span>Nota média geral</span>
+                        <strong id="mediaGeral">—</strong>
+                    </div>
+
+                </article>
+
+                <article class="ranking-stat-card">
+
+                    <div class="ranking-stat-icon">💜</div>
+
+                    <div>
+                        <span>Nota mais alta</span>
+                        <strong id="notaMaisAlta">—</strong>
+                    </div>
+
+                </article>
+
+            </section>
+
+            <!-- PÓDIO -->
+            <section class="ranking-section">
+
+                <div class="ranking-section-header">
+
+                    <div>
+                        <h2>O pódio do casal 🏆</h2>
+
+                        <p>
+                            Os três filmes com as maiores médias.
+                        </p>
+                    </div>
+
+                </div>
+
+                <div class="podium-grid" id="podio">
+
+                    <!-- Gerado pelo JavaScript -->
+
+                </div>
+
+            </section>
+
+            <!-- CLASSIFICAÇÃO COMPLETA -->
+            <section class="ranking-section">
+
+                <div class="ranking-section-header">
+
+                    <div>
+                        <h2>Classificação completa</h2>
+
+                        <p>
+                            Todos os filmes organizados pela nota do casal.
+                        </p>
+                    </div>
+
+                </div>
+
+                <div class="ranking-table-container">
+
+                    <table class="ranking-table">
+
+                        <thead>
+
+                            <tr>
+                                <th>Posição</th>
+                                <th>Filme</th>
+                                <th>Sua nota</th>
+                                <th>Nota dela</th>
+                                <th>Média</th>
+                            </tr>
+
+                        </thead>
+
+                        <tbody id="listaRanking">
+
+                            <!-- Gerado pelo JavaScript -->
+
+                        </tbody>
+
+                    </table>
+
+                    <div class="ranking-empty" id="rankingVazio" hidden>
+
+                        <div>🍿</div>
+
+                        <h3>O ranking ainda está vazio</h3>
+
+                        <p>
+                            Cadastrem seus filmes e avaliem cada sessão
+                            para descobrir os favoritos do casal.
+                        </p>
+
+                        <a href="adicionar-filme.html">
+                            ＋ Cadastrar primeiro filme
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+            <footer class="ranking-footer">
+                Cada filme é uma lembrança. Cada nota conta uma história. 💜
+            </footer>
+
+        </main>
+
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script src="../js/supabase.js"></script>
+    <script src="../js/ranking.js"></script>
+    <script src="../js/proteger-pagina.js"></script>
+
+</body>
+
+</html>
